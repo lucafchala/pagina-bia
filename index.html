@@ -581,6 +581,7 @@
     @media (max-width: 768px) {
       body { cursor: auto; }
       .cursor, .cursor-ring { display: none; }
+      .interest-card { cursor: auto; }
 
       .hero {
         grid-template-columns: 1fr;
@@ -590,9 +591,19 @@
       .hero-right { display: none; }
 
       .hero-left {
-        padding: 4rem 2rem 4rem;
+        padding: 5rem 1.5rem 3.5rem;
         justify-content: flex-end;
         min-height: 100svh;
+      }
+
+      .hero-name {
+        font-size: clamp(3rem, 13vw, 5rem);
+      }
+
+      .hero-tagline {
+        max-width: 100%;
+        font-size: 15px;
+        margin-bottom: 2rem;
       }
 
       .hero-corner--tr, .hero-corner--bl { display: none; }
@@ -600,26 +611,56 @@
 
       .about {
         grid-template-columns: 1fr;
-        padding: 5rem 2rem;
-        gap: 3rem;
+        padding: 4rem 1.5rem;
+        gap: 2rem;
       }
 
       .about::before { display: none; }
 
+      .about-number { font-size: 5rem; }
+
+      .about-title {
+        font-size: clamp(2rem, 8vw, 3rem);
+      }
+
       .about-stats { grid-template-columns: repeat(3, 1fr); gap: 1rem; }
 
-      .interests { padding: 5rem 2rem; }
+      .stat-number { font-size: 2.2rem; }
+
+      .interests { padding: 4rem 1.5rem; }
       .interests-grid { grid-template-columns: 1fr; gap: 1px; }
       .interests-header { flex-direction: column; gap: 0.5rem; }
+      .interests-title { font-size: 2.2rem; }
 
-      .quote-section { padding: 5rem 2rem; }
+      .interest-card { padding: 1.8rem 1.5rem; }
+
+      .quote-section { padding: 4rem 1.5rem; }
 
       .contact {
         grid-template-columns: 1fr;
-        padding: 5rem 2rem;
+        padding: 4rem 1.5rem;
       }
 
-      footer { padding: 2rem; flex-direction: column; gap: 1rem; text-align: center; }
+      .contact-heading {
+        font-size: clamp(2.5rem, 10vw, 4rem);
+      }
+
+      .contact-link {
+        padding: 1rem 1.2rem;
+        min-height: 54px;
+      }
+
+      footer { padding: 1.5rem; flex-direction: column; gap: 0.75rem; text-align: center; }
+    }
+
+    @media (max-width: 400px) {
+      .hero-left { padding: 4rem 1.2rem 3rem; }
+      .hero-name { font-size: clamp(2.8rem, 14vw, 4rem); }
+      .about { padding: 3.5rem 1.2rem; }
+      .about-stats { grid-template-columns: 1fr; gap: 1.5rem; }
+      .interests { padding: 3.5rem 1.2rem; }
+      .quote-section { padding: 3.5rem 1.2rem; }
+      .contact { padding: 3.5rem 1.2rem; }
     }
 
     /* Scroll reveal */
